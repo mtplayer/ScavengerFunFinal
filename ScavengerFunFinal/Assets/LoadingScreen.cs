@@ -20,7 +20,7 @@ public class LoadingScreen : MonoBehaviour
 
         while (!operation.isDone)
         {
-            Debug.Log(operation.progress)
+            Debug.Log(operation.progress);
 
 
             yield return null;
