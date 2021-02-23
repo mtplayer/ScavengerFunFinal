@@ -4,33 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreen : MonoBehaviour
 {
-
-
-    public void LoadLevel(int sceneIndex)
+    private IEnumerator start()
     {
-        StartCoroutine(LoadAsynchronously(sceneIndex));  
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(2);  
     }
-
-
-    IEnumerator LoadAsynchronously(int sceneIndex)
-    {
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-
-        while (!operation.isDone)
-        {
-            Debug.Log(operation.progress);
-
-
-            yield return null;
-        }
-    
-    
-    }
-
-
-
-
-
 }
