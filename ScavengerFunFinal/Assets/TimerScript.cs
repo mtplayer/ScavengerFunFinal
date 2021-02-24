@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
-    public bool timerActive = false;
+    public static bool timerActive = false;
     public int maxTime;
     public int numItems;
     private int currentTime;
@@ -22,7 +22,8 @@ public class TimerScript : MonoBehaviour
     {
         if (timerActive)
         {
-            timerText.text = "Timer: " + Mathf.Ceil(maxTime - Time.time).ToString();
+            currentTime = (int)Mathf.Ceil(maxTime - Time.timeSinceLevelLoad);
+            timerText.text = "Timer: " + currentTime.ToString();
         }
         else
         {

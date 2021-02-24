@@ -8,13 +8,14 @@ public class PauseController : MonoBehaviour {
 
     public void PauseGame()  {
         pausePanel.SetActive(true);
+        Time.timeScale = 0;
+
     }
     
     public void ResumeGame() {
         pausePanel.SetActive(false);
+        Time.timeScale = 1;
+
     }
-
-
-
 } // class
 
