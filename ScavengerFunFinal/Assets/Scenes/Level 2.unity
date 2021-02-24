@@ -2505,7 +2505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2073490a263a8b46994eb173981a346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 30
+  maxTime: 60
   numItems: 10
   currentTime: 0
   timerText: {fileID: 1760805201}
