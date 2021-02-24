@@ -54,7 +54,7 @@ public class ItemInteraction : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (found && !lerping)
+        if (found && !lerping && Time.timeScale == 1)
         {
             startLerping();
             lerping = true;
