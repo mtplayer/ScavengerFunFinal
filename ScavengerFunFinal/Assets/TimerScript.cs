@@ -8,7 +8,7 @@ public class TimerScript : MonoBehaviour
     public static bool timerActive = false;
     public int maxTime;
     public int numItems;
-    private int currentTime;
+    public int currentTime;
     public Text timerText;
 
     // Start is called before the first frame update

@@ -17,5 +17,19 @@ public class PauseController : MonoBehaviour {
         Time.timeScale = 1;
 
     }
+
+
+    void FixedUpdate()
+    {
+        GameObject timer = GameObject.Find("Timer");
+        TimerScript timerScript = timer.GetComponent<TimerScript>();
+        if (timerScript.currentTime <= 0)
+        {
+            
+        }
+    }
+
+
+
 } // class
 
