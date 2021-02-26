@@ -10,7 +10,7 @@ public class TimerScript : MonoBehaviour
     public int maxTime;
     public int numItems;
     public int currentTime;
-    public static bool gameWon;
+    public static bool gameWon = false;
     public Text timerText;
     public Text winner;
 
@@ -20,14 +20,6 @@ public class TimerScript : MonoBehaviour
     {
         timerText.text = "Timer: " + maxTime.ToString();
         currentTime = maxTime;
-    }
-
-    void wait()
-    {
-        winner = GameObject.Find("EndGame").GetComponent<Text>();
-        winner.text = "You Won!";
-        Time.timeScale = 0;
-        gameWon = true;
     }
 
     // Update is called once per frame
@@ -44,8 +36,7 @@ public class TimerScript : MonoBehaviour
         }
         if (ItemInteraction.itemsFound == numItems)
         {
-
-            Invoke("wait", 0.5f);
+            gameWon = true;
         }
     }
 

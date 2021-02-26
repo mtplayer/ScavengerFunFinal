@@ -12,6 +12,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = true;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
@@ -21,6 +22,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = true;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -30,6 +32,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = true;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
@@ -38,6 +41,7 @@ public class SceneChanger : MonoBehaviour
     {
         TimerScript.timerActive = true;
         Time.timeScale = 1;
+        TimerScript.gameWon = false;
         ItemInteraction.itemsFound = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
@@ -61,6 +65,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = false;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 5);
     }
 
@@ -70,6 +75,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = false;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
     }
 
@@ -79,6 +85,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = false;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
@@ -88,6 +95,7 @@ public class SceneChanger : MonoBehaviour
         TimerScript.timerActive = false;
         Time.timeScale = 1;
         ItemInteraction.itemsFound = 0;
+        TimerScript.gameWon = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     //----------------------------------------------

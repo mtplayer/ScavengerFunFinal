@@ -4,9 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreen : MonoBehaviour
 {
-    private IEnumerator start()
+    private void Start()
     {
-        yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene(2);  
+        StartCoroutine(LoadMenu());
+    }
+    private IEnumerator LoadMenu()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(2);
+
+        while (!asyncLoad.isDone)
+            yield return null;
     }
 }
