@@ -74,6 +74,10 @@ public class ItemInteraction : MonoBehaviour
     {         
 	    // this object was clicked - do something     
         found = true; 
+
+
+
+
     }   
 
 
